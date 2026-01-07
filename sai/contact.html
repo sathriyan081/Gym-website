@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact – FitStore</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --primary:#00e676;
+  --dark:#111;
+  --light:#f5f5f5;
+}
+
+body{
+  margin:0;
+  font-family:'Segoe UI', Arial;
+  background:var(--light);
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(90deg,#000,#222);
+  color:#fff;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header h1{
+  margin:0;
+  color:var(--primary);
+}
+
+nav a{
+  color:#fff;
+  margin-left:15px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+/* HERO */
+.hero{
+  background:url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') center/cover;
+  padding:70px 20px;
+  text-align:center;
+  color:#fff;
+}
+
+.hero h2{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+/* CONTAINER */
+.container{
+  padding:40px;
+}
+
+/* CONTACT CARD */
+.contact-card{
+  background:#fff;
+  max-width:1000px;
+  margin:auto;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+@media(max-width:800px){
+  .contact-card{
+    grid-template-columns:1fr;
+  }
+}
+
+/* INFO */
+.info h3{
+  margin-top:0;
+  color:var(--dark);
+}
+
+.info p{
+  color:#444;
+  line-height:1.6;
+  margin:10px 0;
+}
+
+/* FORM */
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:15px;
+}
+
+form textarea{
+  resize:none;
+  height:120px;
+}
+
+form button{
+  width:100%;
+  padding:12px;
+  background:var(--dark);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+form button:hover{
+  background:var(--primary);
+  color:#000;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  color:#ccc;
+  text-align:center;
+  padding:20px;
+  margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>FitStore</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Get in Touch</h2>
+  <p>We’d love to hear from you</p>
+</section>
+
+<div class="container">
+  <div class="contact-card">
+
+    <div class="info">
+      <h3>Contact Information</h3>
+      <p><strong>📧 Email:</strong> support@fitstore.com</p>
+      <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+      <p><strong>📍 Address:</strong> Chennai, India</p>
+      <p>
+        Have questions about our products or services?  
+        Send us a message and our team will get back to you shortly.
+      </p>
+    </div>
+
+    <form>
+      <h3>Send Message</h3>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</div>
+
+<footer>
+© 2026 FitStore | Support Team Always Ready
+</footer>
+
+</body>
+</html>

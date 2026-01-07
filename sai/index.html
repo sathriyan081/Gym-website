@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FitStore – Gym Accessories</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --primary:#00e676;
+  --dark:#111;
+  --light:#f5f5f5;
+}
+
+body{
+  margin:0;
+  font-family:'Segoe UI', Arial;
+  background:var(--light);
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(90deg,#000,#222);
+  color:#fff;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header h1{
+  margin:0;
+  color:var(--primary);
+}
+
+nav a{
+  color:#fff;
+  margin:0 12px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+/* HERO */
+.hero{
+  background:url('https://images.unsplash.com/photo-1599058917212-d750089bc07c') center/cover;
+  color:#fff;
+  padding:80px 30px;
+  text-align:center;
+}
+
+.hero h2{
+  font-size:42px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
+/* CONTAINER */
+.container{
+  padding:40px;
+}
+
+/* CATEGORY */
+.category{
+  margin-bottom:50px;
+}
+
+.category h3{
+  font-size:26px;
+  margin-bottom:20px;
+  border-left:6px solid var(--primary);
+  padding-left:12px;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+}
+
+.product{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+  transition:transform .3s;
+}
+
+.product:hover{
+  transform:translateY(-8px);
+}
+
+.product img{
+  width:70%;
+  height:170px;
+  object-fit:cover;
+  
+  
+}
+
+.product .info{
+  padding:15px;
+  object-fit:cover;
+}
+
+.product h4{
+  margin:5px 0;
+}
+
+.price{
+  color:#00c853;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.product button{
+  width:100%;
+  padding:10px;
+  margin-top:8px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.add{
+  background:#111;
+  color:#fff;
+}
+
+.buy{
+  background:var(--primary);
+  color:#000;
+}
+
+.product button:hover{
+  opacity:0.85;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  color:#ccc;
+  text-align:center;
+  padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>FitStore</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Upgrade Your Fitness</h2>
+  <p>Premium Gym Accessories | Stronger Every Day</p>
+</section>
+
+<div class="container">
+
+<!-- Strength Training -->
+<div class="category">
+<h3>🏋️ Strength Training</h3>
+<div class="products">
+
+<div class="product">
+  <img src="Boost your workout with these sleek 12_5KG….jpg">
+  <div class="info">
+    <h4>Dumbbells Set</h4>
+    <div class="price">₹1,999</div>
+    <button class="add" onclick="addToCart('Dumbbells Set',1999)">Add to Cart</button>
+    <button class="buy" onclick="buyNow('Dumbbells Set',1999)">Buy Now</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="Upgrade your workout with durable and….jpg.">
+  <div class="info">
+    <h4>Barbell Rod</h4>
+    <div class="price">₹2,999</div>
+    <button class="add" onclick="addToCart('Barbell Rod',2999)">Add to Cart</button>
+    <button class="buy" onclick="buyNow('Barbell Rod',2999)">Buy Now</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="Kettlebell Exercises for Chest- KB Squeeze Press.jpg">
+  <div class="info">
+    <h4>Kettlebell</h4>
+    <div class="price">₹1,299</div>
+    <button class="add" onclick="addToCart('Kettlebell',1299)">Add to Cart</button>
+    <button class="buy" onclick="buyNow('Kettlebell',1299)">Buy Now</button>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="product">
+  <img src="Exercise mat for yoga, pilates, and other workout routines Textured surface for enhanced traction 1_2-inch, extra-thick yoga mat for comfortable, cushioning support Made of lightweight, durable foam Measures a (1).jpg">
+  <div class="info">
+    <h4>Yoga Mat</h4>
+    <div class="price">₹899</div>
+    <button class="add" onclick="addToCart('Yoga Mat',899)">Add to Cart</button>
+    <button class="buy" onclick="buyNow('Yoga Mat',899)">Buy Now</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="download (6).jpg">
+  <div class="info">
+    <h4>Skipping Rope</h4>
+    <div class="price">₹399</div>
+    <button class="add" onclick="addToCart('Skipping Rope',399)">Add to Cart</button>
+    <button class="buy" onclick="buyNow('Skipping Rope',399)">Buy Now</button>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- Accessories -->
+<div class="category">
+<h3>🧤 Gym Accessories</h3>
+<div class="products">
+
+<div class="product">
+  <img src="Boxing gloves ringside.jpg">
+  <div class="info">
+    <h4>Gym Gloves</h4>
+    <div class="price">₹599</div>
+    <button class="add" onclick="addToCart('Gym Gloves',599)">Add to Cart</button>
+    <button class="buy" onclick="buyNow('Gym Gloves',599)">Buy Now</button>
+  </div>
+</div>
+
+<div class="product">
+  <img src="Tag someone who needs a PROMiXX Mixer in their life!.jpg">
+  <div class="info">
+    <h4>Shaker Bottle</h4>
+    <div class="price">₹299</div>
+    <button class="add" onclick="addToCart('Shaker Bottle',299)">Add to Cart</button>
+    <button class="buy" onclick="buyNow('Shaker Bottle',299)">Buy Now</button>
+  </div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<footer>
+© 2026 FitStore | Designed for Fitness Lovers
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function addToCart(name, price){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({name, price});
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(name + " added to cart!");
+}
+
+function buyNow(name, price){
+  localStorage.setItem("buyNow", JSON.stringify({name, price}));
+  window.location.href = "buynow.html";
+}
+</script>
+
+</body>
+</html>
